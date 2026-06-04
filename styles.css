@@ -371,6 +371,7 @@ body {
     height: 60px;
     overflow: hidden;
     border-bottom: 2px dashed rgba(255, 255, 255, 0.05);
+    z-index: 10;
 }
 
 .pixel-cat-walking {
@@ -380,11 +381,11 @@ body {
     display: flex;
     align-items: center;
     gap: 1rem;
-    animation: walk-cat 25s linear infinite;
+    animation: walk-cat 12s linear infinite;
 }
 
 .pixel-cat-walking svg {
-    animation: flip-cat 25s linear infinite;
+    animation: flip-cat 12s linear infinite;
 }
 
 .meow-text {
@@ -393,7 +394,7 @@ body {
     font-size: 1.1rem;
     font-weight: bold;
     opacity: 0;
-    animation: meow-fade 25s linear infinite;
+    animation: meow-fade 12s linear infinite;
 }
 
 .cat-leg-1 { animation: walk-legs 0.3s infinite; }
