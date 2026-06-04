@@ -1,0 +1,435 @@
+/* --- Variables y Configuración Base --- */
+:root {
+    --bg-color: #0f172a; /* Fondo principal oscuro (Slate 900) */
+    --bg-darker: #020617; /* Fondo secundario más oscuro */
+    --text-main: #f8fafc; /* Texto claro */
+    --text-muted: #94a3b8; /* Texto grisáceo para subtítulos y descripciones */
+    --accent-1: #0ea5e9; /* Azul cyan (Accent) */
+    --accent-2: #8b5cf6; /* Púrpura (Gradient partner) */
+    --card-bg: rgba(30, 41, 59, 0.5); /* Fondo de tarjetas con transparencia (Glassmorphism) */
+    --card-border: rgba(255, 255, 255, 0.1); /* Borde sutil para tarjetas */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* Habilita el scroll suave nativo para los anclajes href="#id" */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* --- Navegación --- */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(12px); /* Efecto cristalino */
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 1000;
+    border-bottom: 1px solid var(--card-border);
+    transition: all 0.3s ease;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--accent-1);
+}
+
+.navbar nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar nav a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.navbar nav a:hover {
+    color: var(--accent-1);
+}
+
+/* --- Estructura General de Secciones --- */
+.section {
+    padding: 6rem 5%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.bg-darker {
+    background-color: var(--bg-darker);
+}
+
+.section-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 3rem;
+    text-align: center;
+    font-weight: 800;
+}
+
+/* --- Hero Section --- */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding: 0 5%;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.hero-title {
+    font-size: clamp(3rem, 5vw, 5rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+/* Gradiente para el nombre */
+.text-gradient {
+    background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+}
+
+.hero-subtitle strong {
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+/* Botón Principal */
+.btn-primary {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(14, 165, 233, 0.4);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(14, 165, 233, 0.6);
+}
+
+/* Decoración de fondo suave */
+.glow-circle {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(14, 165, 233, 0.15) 0%, rgba(15, 23, 42, 0) 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+/* --- Sobre Mí --- */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-text p {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.skill-category h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+    color: var(--text-main);
+    border-bottom: 2px solid var(--accent-1);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.tag {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--card-border);
+    padding: 0.5rem 1.2rem;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    color: var(--text-main);
+    transition: all 0.3s ease;
+}
+
+.tag:hover {
+    background: var(--accent-1);
+    border-color: var(--accent-1);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* --- Proyectos --- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+/* Glassmorphism en tarjetas */
+.project-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-12px);
+    border-color: var(--accent-1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.project-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+}
+
+.project-desc {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    flex-grow: 1; /* Empuja los tags al fondo de la tarjeta */
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.project-tech span {
+    font-size: 0.85rem;
+    color: var(--accent-1);
+    font-weight: 600;
+    background: rgba(14, 165, 233, 0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+}
+
+/* --- Contacto / Footer --- */
+.footer {
+    padding: 6rem 5% 3rem;
+    background-color: var(--bg-color);
+    text-align: center;
+}
+
+.footer p {
+    color: var(--text-muted);
+    font-size: 1.15rem;
+    margin-bottom: 3rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    padding: 0.8rem 2.5rem;
+    border: 1px solid var(--card-border);
+    border-radius: 50px;
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.02);
+    transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+    background: var(--text-main);
+    color: var(--bg-color);
+    transform: translateY(-3px);
+}
+
+.copyright {
+    border-top: 1px solid var(--card-border);
+    padding-top: 2rem;
+}
+
+.copyright p {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+/* --- Animaciones con Intersection Observer --- */
+/* Estado inicial de los elementos (ocultos y desplazados hacia abajo) */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Clase que se añade con JS cuando son visibles en pantalla */
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Enlaces Flotantes en Hero --- */
+.name-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.floating-link {
+    position: absolute;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    animation: floating 4s ease-in-out infinite;
+    z-index: 10;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    -webkit-text-fill-color: var(--text-main);
+}
+
+.floating-link:hover {
+    background: var(--accent-1);
+    color: white;
+    border-color: var(--accent-1);
+    animation-play-state: paused;
+}
+
+.linkedin-float {
+    top: -25px;
+    left: -15px;
+    animation-delay: 0s;
+}
+
+.github-float {
+    bottom: -15px;
+    right: -25px;
+    animation-delay: -2s;
+}
+
+@keyframes floating {
+    0% { transform: translateY(0px) rotate(-3deg); }
+    50% { transform: translateY(-8px) rotate(3deg); }
+    100% { transform: translateY(0px) rotate(-3deg); }
+}
+
+@media (max-width: 768px) {
+    .linkedin-float {
+        top: -35px;
+        left: 0;
+    }
+    .github-float {
+        bottom: -25px;
+        right: 0;
+    }
+}
+
+/* --- Media Queries (Responsive Design) --- */
+@media (max-width: 900px) {
+    .about-grid {
+        grid-template-columns: 1fr; /* Columna única en Sobre Mí */
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    .navbar nav {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .section {
+        padding: 5rem 5%;
+    }
+    .hero-title {
+        font-size: 2.8rem;
+    }
+}

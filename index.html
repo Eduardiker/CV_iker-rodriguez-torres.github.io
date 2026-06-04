@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iker Rodríguez | Sistemas & Desarrollo</title>
+    
+    <!-- Google Fonts para una tipografía moderna y limpia -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Archivo de estilos -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navegación -->
+    <header class="navbar">
+        <div class="logo">Iker<span>.dev</span></div>
+        <nav>
+            <a href="#sobre-mi">Sobre Mí</a>
+            <a href="#experiencia">Experiencia</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- Sección Hero -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Hola, soy 
+                <span class="name-wrapper">
+                    <span class="text-gradient">Iker Rodríguez</span>
+                    <a href="https://www.linkedin.com/in/iker-rodr%C3%ADguez-torres-a79b381b9/" target="_blank" class="floating-link linkedin-float">LinkedIn</a>
+                    <a href="https://github.com/Eduardiker" target="_blank" class="floating-link github-float">GitHub</a>
+                </span>.
+            </h1>
+            <p class="hero-subtitle">
+                Técnico Superior en Administración de Sistemas e Ingeniero Multimedia en formación. 
+                Apasionado por la informática, buscando siempre soluciones innovadoras y rápidas a problemas complejos.
+            </p>
+            <a href="#experiencia" class="btn-primary">Ver mi experiencia</a>
+        </div>
+        <!-- Elemento decorativo de fondo -->
+        <div class="glow-circle"></div>
+    </section>
+
+    <!-- Sección Sobre Mí -->
+    <section id="sobre-mi" class="section">
+        <div class="container animate-on-scroll">
+            <h2 class="section-title">Sobre Mí & Habilidades</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        Soy un perfil joven con gran capacidad de adaptación a nuevos espacios y situaciones de trabajo.
+                        Actualmente compagino mis estudios de <strong>Ingeniería en Multimedia, aplicaciones y videojuegos</strong> en la Universitat de Vic 
+                        con mi carrera profesional tras haberme graduado como <strong>Técnico Superior en ASIR</strong>.
+                    </p>
+                    <p style="margin-top: 1rem;">
+                        Tengo amplia experiencia en administración de sistemas, redes y bases de datos, destacando por mi proactividad, trabajo en equipo y gran capacidad organizativa.
+                    </p>
+                </div>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h3>Sistemas y Redes</h3>
+                        <div class="tags">
+                            <span class="tag">Active Directory</span>
+                            <span class="tag">Azure / VMWare</span>
+                            <span class="tag">Zabbix / PRTG</span>
+                            <span class="tag">Firewalls (Sophos, Forti)</span>
+                            <span class="tag">Apache / PostFix</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Desarrollo y Scripting</h3>
+                        <div class="tags">
+                            <span class="tag">C#</span>
+                            <span class="tag">JavaScript / HTML / CSS</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">Bash</span>
+                            <span class="tag">XML</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Experiencia -->
+    <section id="experiencia" class="section bg-darker">
+        <div class="container animate-on-scroll">
+            <h2 class="section-title">Experiencia Profesional</h2>
+            <div class="projects-grid">
+                
+                <!-- Tarjeta de Experiencia 1 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-content">
+                        <h3 class="project-title">Responsable de Infraestructuras</h3>
+                        <p class="project-desc"><strong>Embotits Caseros Collell</strong> (Sept 2025 – Actualidad)<br><br>Implantación de toda la segmentación de red, securización del sistema y gestión de servicios clave para la empresa.</p>
+                        <div class="project-tech">
+                            <span>Zabbix</span>
+                            <span>vSphere</span>
+                            <span>Veeam Backup</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta de Experiencia 2 -->
+                <div class="project-card animate-on-scroll" style="transition-delay: 0.1s;">
+                    <div class="project-content">
+                        <h3 class="project-title">Soporte e Infraestructura</h3>
+                        <p class="project-desc"><strong>Grup WERFOODS / Friselva</strong> (Nov 2024 – Sept 2025)<br><br>Soporte helpdesk de planta, propuesta e implantación de sistema de inventario GLPI y toma de control de políticas GPO para securización, instalación de software y automatización.</p>
+                        <div class="project-tech">
+                            <span>GLPI</span>
+                            <span>GPOs</span>
+                            <span>Windows Server</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta de Experiencia 3 -->
+                <div class="project-card animate-on-scroll" style="transition-delay: 0.2s;">
+                    <div class="project-content">
+                        <h3 class="project-title">Técnico Helpdesk</h3>
+                        <p class="project-desc"><strong>Ajuntament de Sant Feliu</strong> (Sept 2023 – Nov 2024)<br><br>Soporte a usuarios, implantación de mejoras de red (Firewall, Switches, ACL) y establecimiento de sistema de ticketing.</p>
+                        <div class="project-tech">
+                            <span>Redes (ACL)</span>
+                            <span>Firewall</span>
+                            <span>GLPI</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto / Footer -->
+    <footer id="contacto" class="footer">
+        <div class="container animate-on-scroll">
+            <h2 class="section-title">Hablemos</h2>
+            <p>¿Interesado en mi perfil? Puedes contactarme por teléfono o correo electrónico.</p>
+            <div class="social-links">
+                <a href="mailto:eduardiker@gmail.com" class="social-btn">eduardiker@gmail.com</a>
+                <a href="tel:+34636701399" class="social-btn">+34 636 701 399</a>
+                <!-- Enlaces a redes sociales -->
+                <a href="https://www.linkedin.com/in/iker-rodr%C3%ADguez-torres-a79b381b9/" target="_blank" class="social-btn">LinkedIn</a>
+                <a href="https://github.com/Eduardiker" target="_blank" class="social-btn">GitHub</a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Iker Rodríguez Torres. Creado con pasión y código.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Archivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
