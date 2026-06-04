@@ -27,6 +27,7 @@ const translations = {
         proj_2_desc: "Desarrollo de hardware y programación con Arduino para lectura de sensores, enviando la telemetría en tiempo real mediante protocolo MQTT a una aplicación móvil.",
         contact_title: "Hablemos",
         contact_desc: "¿Interesado en mi perfil? Puedes contactarme por teléfono o correo electrónico.",
+        cat_meow: "¡Miau!",
         footer_copy: "&copy; 2026 Iker Rodríguez Torres. Que el código te acompañe. 🌌"
     },
     ca: {
@@ -57,6 +58,7 @@ const translations = {
         proj_2_desc: "Desenvolupament de maquinari i programació amb Arduino per a lectura de sensors, enviant la telemetria en temps real mitjançant protocol MQTT a una aplicació mòbil.",
         contact_title: "Parlem",
         contact_desc: "Interessat en el meu perfil? Pots contactar-me per telèfon o correu electrònic.",
+        cat_meow: "Mèu!",
         footer_copy: "&copy; 2026 Iker Rodríguez Torres. Que el codi t'acompanyi. 🌌"
     },
     en: {
@@ -87,6 +89,7 @@ const translations = {
         proj_2_desc: "Hardware development and programming with Arduino for sensor reading, sending real-time telemetry via MQTT protocol to a mobile app.",
         contact_title: "Let's Talk",
         contact_desc: "Interested in my profile? You can contact me by phone or email.",
+        cat_meow: "Meow!",
         footer_copy: "&copy; 2026 Iker Rodríguez Torres. May the code be with you. 🌌"
     }
 };
