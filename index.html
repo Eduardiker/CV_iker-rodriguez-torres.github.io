@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iker Rodríguez | Sistemas & Desarrollo</title>
+    
+    <!-- Google Fonts para una tipografía moderna y limpia -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Archivo de estilos -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navegación -->
+    <header class="navbar">
+        <div class="logo">Iker<span>.dev</span></div>
+        <nav>
+            <a href="#sobre-mi" data-i18n="nav_about">Sobre Mí</a>
+            <a href="#experiencia" data-i18n="nav_exp">Experiencia</a>
+            <a href="#proyectos" data-i18n="nav_proj">Proyectos</a>
+            <a href="#contacto" data-i18n="nav_contact">Contacto</a>
+            <div class="lang-switcher">
+                <button class="lang-btn active" id="btn-es" onclick="setLanguage('es')">ES</button>
+                <button class="lang-btn" id="btn-ca" onclick="setLanguage('ca')">CA</button>
+                <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">EN</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sección Hero -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span data-i18n="hero_greeting">Hola, soy </span>
+                <span class="name-wrapper">
+                    <span class="text-gradient">Iker Rodríguez</span>
+                    <a href="https://www.linkedin.com/in/iker-rodr%C3%ADguez-torres-a79b381b9/" target="_blank" class="floating-link linkedin-float"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://github.com/Eduardiker" target="_blank" class="floating-link github-float"><i class="fa-brands fa-github"></i> GitHub</a>
+                </span><span class="dot">.</span>
+            </h1>
+            <p class="hero-subtitle" data-i18n="hero_subtitle">
+                Técnico Superior en Administración de Sistemas e Ingeniero Multimedia en formación. 
+                Apasionado por la informática, buscando siempre soluciones innovadoras y rápidas a problemas complejos.
+            </p>
+            <a href="#experiencia" class="btn-primary" data-i18n="hero_btn">Ver mi experiencia</a>
+        </div>
+        <!-- Elemento decorativo de fondo -->
+        <div class="glow-circle"></div>
+    </section>
+
+    <!-- Sección Sobre Mí -->
+    <section id="sobre-mi" class="section">
+        <div class="container animate-on-scroll">
+            <h2 class="section-title" data-i18n="about_title">Sobre Mí & Habilidades</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p data-i18n="about_p1">
+                        Soy un perfil joven con gran capacidad de adaptación a nuevos espacios y situaciones de trabajo.
+                        Actualmente compagino mis estudios de <strong>Ingeniería en Multimedia, aplicaciones y videojuegos</strong> en la Universitat de Vic 
+                        con mi carrera profesional tras haberme graduado como <strong>Técnico Superior en ASIR</strong>.
+                    </p>
+                    <p style="margin-top: 1rem;" data-i18n="about_p2">
+                        Tengo amplia experiencia en administración de sistemas, redes y bases de datos, destacando por mi proactividad, trabajo en equipo y gran capacidad organizativa.
+                    </p>
+                </div>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h3 data-i18n="sys_net">Sistemas y Redes</h3>
+                        <div class="tags">
+                            <span class="tag">Linux / Windows Server</span>
+                            <span class="tag">Active Directory / GPOs</span>
+                            <span class="tag">Azure / VMWare</span>
+                            <span class="tag">Zabbix / PRTG</span>
+                            <span class="tag">Firewalls (Sophos, Forti)</span>
+                            <span class="tag">Veeam Backup</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3 data-i18n="dev_script">Desarrollo y Scripting</h3>
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">C#</span>
+                            <span class="tag">JavaScript / HTML / CSS</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">Bash / PowerShell</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Experiencia -->
+    <section id="experiencia" class="section bg-darker">
+        <div class="container animate-on-scroll">
+            <h2 class="section-title" data-i18n="exp_title">Experiencia Profesional</h2>
+            <div class="projects-grid">
+                
+                <div class="project-card animate-on-scroll">
+                    <div class="project-content">
+                        <h3 class="project-title" data-i18n="exp_1_title">Responsable de Infraestructuras</h3>
+                        <p class="project-desc" data-i18n="exp_1_desc"><strong>Embotits Caseros Collell</strong> (Sept 2025 – Actualidad)<br><br>Implantación de toda la segmentación de red, securización del sistema y gestión de servicios clave para la empresa.</p>
+                        <div class="project-tech">
+                            <span>Zabbix</span>
+                            <span>vSphere</span>
+                            <span>Veeam Backup</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card animate-on-scroll" style="transition-delay: 0.1s;">
+                    <div class="project-content">
+                        <h3 class="project-title" data-i18n="exp_2_title">Soporte e Infraestructura</h3>
+                        <p class="project-desc" data-i18n="exp_2_desc"><strong>Grup WERFOODS / Friselva</strong> (Nov 2024 – Sept 2025)<br><br>Soporte helpdesk de planta, propuesta e implantación de sistema de inventario GLPI y toma de control de políticas GPO para securización, instalación de software y automatización.</p>
+                        <div class="project-tech">
+                            <span>GLPI</span>
+                            <span>GPOs</span>
+                            <span>Windows Server</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card animate-on-scroll" style="transition-delay: 0.2s;">
+                    <div class="project-content">
+                        <h3 class="project-title" data-i18n="exp_3_title">Técnico Helpdesk</h3>
+                        <p class="project-desc" data-i18n="exp_3_desc"><strong>Ajuntament de Sant Feliu</strong> (Sept 2023 – Nov 2024)<br><br>Soporte a usuarios, implantación de mejoras de red (Firewall, Switches, ACL) y establecimiento de sistema de ticketing.</p>
+                        <div class="project-tech">
+                            <span>Redes (ACL)</span>
+                            <span>Firewall</span>
+                            <span>GLPI</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Proyectos -->
+    <section id="proyectos" class="section">
+        <div class="container animate-on-scroll">
+            <h2 class="section-title" data-i18n="proj_title">Proyectos Destacados</h2>
+            <div class="projects-grid">
+                
+                <div class="project-card animate-on-scroll">
+                    <div class="project-content">
+                        <h3 class="project-title" data-i18n="proj_1_title">Diseño de Red Empresarial</h3>
+                        <p class="project-desc" data-i18n="proj_1_desc">Creación e implementación de una red corporativa compleja desde cero. Diseño de topología y segmentación avanzada para garantizar seguridad y rendimiento.</p>
+                        <div class="project-tech">
+                            <span>VLANs</span>
+                            <span>Switching</span>
+                            <span>Routing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card animate-on-scroll" style="transition-delay: 0.1s;">
+                    <div class="project-content">
+                        <h3 class="project-title" data-i18n="proj_2_title">Estación Meteorológica IoT</h3>
+                        <p class="project-desc" data-i18n="proj_2_desc">Desarrollo de hardware y programación con Arduino para lectura de sensores, enviando la telemetría en tiempo real mediante protocolo MQTT a una aplicación móvil.</p>
+                        <div class="project-tech">
+                            <span>Arduino</span>
+                            <span>MQTT</span>
+                            <span>App Móvil</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto / Footer -->
+    <footer id="contacto" class="footer">
+        <div class="container animate-on-scroll">
+            <h2 class="section-title" data-i18n="contact_title">Hablemos</h2>
+            <p data-i18n="contact_desc">¿Interesado en mi perfil? Puedes contactarme por teléfono o correo electrónico.</p>
+            <div class="social-links">
+                <a href="mailto:eduardiker@gmail.com" class="social-btn"><i class="fa-solid fa-envelope"></i> eduardiker@gmail.com</a>
+                <a href="tel:+34636701399" class="social-btn"><i class="fa-solid fa-phone"></i> +34 636 701 399</a>
+                <a href="https://www.linkedin.com/in/iker-rodr%C3%ADguez-torres-a79b381b9/" target="_blank" class="social-btn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/Eduardiker" target="_blank" class="social-btn"><i class="fa-brands fa-github"></i> GitHub</a>
+            </div>
+            <div class="copyright">
+                <p data-i18n="footer_copy">&copy; 2026 Iker Rodríguez Torres. Creado con pasión y código.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Archivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
